@@ -1,0 +1,114 @@
+A responsividade com Media queries é uma forma de adaptar seu software/web para qualquer tipo de tela
+seja celular, tablet, PC, de forma que não quebre, nem fique funcionamento
+
+o que são os media queries
+    São condicoes no CSS que dizem se a tela é menor aplique tal estilo, se não sera tal estilo
+
+    ex {
+        @media (max-width: 600px) {
+        .sidebar {
+            display: none;
+        }
+
+        .content {
+            flex: 1;
+            padding: 10px;
+            }
+        }
+    }
+
+    aqui ele diz que se a tela for menor que 600px ele deverá esconder a sidebar e ajustar o conteudo
+
+Como usar 
+    @media (max-width: 768px) {
+  /* Estilos para telas menores que 768px */
+}
+
+tipos de media query
+    max-width: 768px - aplica estilo se a tela for até 768px
+    min-width: 769px - aplica estilo se a tela for maior que 769px
+    orientation: landscape - Aplica estilo se o celular estiver de lado
+    hover:none: detecta se o dispostivo não tem mouse
+
+    /* Estilo padrão (desktop) */
+.card {
+  width: 300px;
+}
+
+/* Estilo para celular */
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+}
+
+================================================
+Tabela de Breakpoints (tamanhos de tela)
+
+Dispositivo	Largura máx.	@media usado
+📱 Celular pequeno	480px	@media (max-width: 480px)
+📱 Celular padrão	600px	@media (max-width: 600px)
+📱📲 Tablet (retrato)	768px	@media (max-width: 768px)
+📲 Tablet (paisagem)	992px	@media (max-width: 992px)
+💻 Notebook	1200px	@media (max-width: 1200px)
+🖥️ Desktop grande	1400px+	@media (min-width: 1400px)
+
+    /* Para celulares pequenos */
+    @media (max-width: 480px) {
+    body {
+        background-color: red;
+    }
+    }
+
+    /* Para tablets */
+    @media (max-width: 768px) {
+    body {
+        background-color: green;
+    }
+    }
+
+    /* Para desktop */
+    @media (min-width: 1200px) {
+    body {
+        background-color: blue;
+    }
+    }
+
+Isso altera o fundo conforme o aparelho, otimo para testar se esta funcionando
+
+também é possivel combinar medias
+
+    @media (min-width: 768px) and (max-width: 992px) {
+    /* Estilo só para tablets deitados */
+    }
+
+
+Ou seja, caso eu tenha um celular e meu site seja responsivo ele se adaptara conforme a largura correta
+da tela, no media eu direi o que ele tera que fazer
+
+    por exemplo, o eu tenho um menu e ele fica lado a lado, mas eu irei usar em um celular então eu altero 
+    pra ficar em coluna
+
+        ex {
+            <div class="menu">
+            <a href="#">Início</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+            </div>
+            css
+            Copiar
+            Editar
+            /* Layout padrão (desktop) */
+            .menu {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            /* Layout para telas pequenas (celular) */
+            @media (max-width: 600px) {
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+            }
+        }

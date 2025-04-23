@@ -1,0 +1,47 @@
+Grid do CSS é uma forma de criar grades ou seja dividir a pagina em linhas e colunas, ideal para montar
+galerias de imagens, sessoes de coluna tipo tabels ("sobre", "serviço", "Contato")
+e paginas complexas com blocos bem organizados
+
+a diferença entre a grid e a flexbox é que:
+    a flexbox ideal pra um eixo (seja horizontal ou vertical)
+    alinhar elementos lado a lado um do outro
+    mais simples e rapido
+
+    Ja a grid é ideial para dois eixos, cria grades completas de layout mais poderosos e organizados
+
+    ex {
+        <div class="grid">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        </div>
+
+        <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* duas colunas */
+            gap: 10px;
+        }
+
+        .grid div {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        </style>
+
+    }
+
+display: grid - ativa o grid layout
+grid-template-areas - nomeia partes do layout
+grid-template-columns: 1fr 1fr; - cria 2 colunas iguais
+
+    Adaptando com media queries
+
+        @media (max-width: 600px) {
+        .grid {
+            grid-template-columns: 1fr; /* só uma coluna no celular */
+        }
+        }

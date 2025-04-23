@@ -1,0 +1,70 @@
+Formulario serve para coletar dados do usuario: nome, email, mensagens, senha, etc.
+
+Estrutura basica de um Formulario
+    ex {
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+    }
+
+<form> - envolve todo o Formulario
+<label> - texto discritivo pro campo
+<select> - cria um campo de seleção
+<input> - Campo de preenchimento
+<textarea> - área maior de texto (usada em mensagens)
+<button> - botão pra enviar o Formulario
+    type="" - define o tipo de dado que o campo aceita
+        text - texto simples 
+        email - email
+        password - campo com senha(oculta)
+        checkbox - Caixinha de seleção
+        radio - seleção única em grupo
+        submit - botão de envio do Formulario
+        file - upload de arquivos
+        number - só aceita numeros
+        date - seletor de data
+
+    <form style="max-width: 400px; margin: 30px auto; display: flex; flex-direction: column; gap: 15px;">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+        <button type="submit" style="padding: 10px; background-color: #2ecc71; color: white; border: none; cursor: pointer;">
+            Enviar
+        </button>
+    </form>
+
+<option value="">Selecione...</option>
+    <option> - cria uma opção dentro do select
+        value="" - valor que sera enviado ao Formulario
+
+
+
+
+
+<label><input type="radio" name="genero" value="masculino"> Masculino</label>
+
+    <label> - agrupa o input com um texto clicavel
+    <input type="radio"> - cria um botao de seleção unica
+        name="genero" agrupa os radios(so 1 pode ser selecionado desse grupo)
+        value="masculino" - envia o valor definido se ele for selecionado
+
+<input type="date" id="nascimento" name="nascimento">
+    <input> - entrada de dados
+        id="nascimento" - Indentificador unico (pode ser usado em label)
+        name="nascimento" - nome do campo

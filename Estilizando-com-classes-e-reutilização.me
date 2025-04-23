@@ -1,0 +1,46 @@
+Class no CSS é uma forma de nomear um grupo de estlos e aplica em grupo em varios elementos ao mesmo tempo
+
+    ex {
+        <p class="destaque">Esse texto está em destaque</p>
+
+        <style>
+        .destaque {
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        </style>
+    }
+
+    a classe destaque aplica sua estilização ao texto
+
+    Diferença entre ID, class e seletor direto
+
+    class usa '.' , pode repitir = .menu
+
+    id usa # , não pode repitir = #cabecalho
+
+    elemento (sem nada) pode repitir = p{...}
+
+
+    ex com classe {
+       <div class="caixa verde">Caixa Verde</div>
+        <div class="caixa azul">Caixa Azul</div>
+
+        <style>
+            .caixa {
+                padding: 20px;
+                border: 1px solid black;
+                margin: 10px;
+                color: white;
+            }
+
+            .verde {
+                background-color: green;
+            }
+
+            .azul {
+                background-color: blue;
+            }
+        </style> 
+    }
