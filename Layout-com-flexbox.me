@@ -1,0 +1,61 @@
+Para explicar melhor o funcionamento dda Flexbox, ela serve para posicionar tanto na horizontal quanto na vertical
+
+==Horizontal - padrao==
+<div class="layout">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+
+<style>
+  .layout {
+    display: flex;
+  }
+</style>
+
+==Vertical ===========
+<div class="layout">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+
+<style>
+  .layout {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
+
+a flexbox como diz o nome flexibiliza os itens lhe permitindo maior controle do espaço entre eles além de ajudar na responsividade
+
+===========Outras estruturas=========================
+
+<aside> - É uma área que não é essencial para o conteúdo principal, mas ainda está relacionado a ele, Normalmente é usado para barras laterais, widgets,
+        links extras, ou anúncios
+
+        ex {
+            <aside>
+                <p>Este é um conteúdo relacionado, como uma lista de links ou artigos recomendados.</p>
+            </aside>
+        }
+
+<ul> - lista não ordenada, Cria uma lista de itens mas sem uma ordem especifica, os itens sao organizados dentro de <li> (itens da lista)
+
+        ex {
+            <ul>
+                <li>Home</li>
+                <li>Projetos</li>
+                <li>Contato</li>
+            </ul>
+        }
+
+<li> - item de lista - Cada item de uma lista (seja <ul> ou <ol> é colocado dentro de uma tag <li>), em resumo define cada item dentro da lista usado dentro de ul ou ol
+
+        ex {
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        }
